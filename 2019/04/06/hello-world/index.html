@@ -13,9 +13,9 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="叶大锤">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="John Doe">
+    <meta name="copyright" content="叶大锤">
     
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
@@ -409,7 +409,7 @@ height:50vh;
     <!-- license  -->
     
         <div class="license-wrapper">
-            <p>原文作者：<a href="http://yoursite.com">John Doe</a>
+            <p>原文作者：<a href="http://yoursite.com">叶大锤</a>
             </p><p>原文链接：<a href="http://yoursite.com/2019/04/06/hello-world/">http://yoursite.com/2019/04/06/hello-world/</a>
             </p><p>发表日期：<a href="http://yoursite.com/2019/04/06/hello-world/">April 6th 2019, 4:31:14 pm</a>
             </p><p>更新日期：<a href="http://yoursite.com/2019/04/06/hello-world/">April 6th 2019, 4:31:14 pm</a>
@@ -648,7 +648,7 @@ jsonContent:
     <script>
     var siteMeta = {
         root: "/",
-        author: "John Doe"
+        author: "叶大锤"
     }
 </script>
     <!-- CDN failover -->
@@ -674,7 +674,23 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
 
 
