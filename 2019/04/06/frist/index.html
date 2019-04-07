@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">423</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">992</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -401,16 +401,35 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>首先，什么是机器学习呢？<br>机器学习说白了就是 <strong>Looking for a Function From Data</strong> 。举个例子：如果你想要识别所给图像是猫还是狗，就要通过机器找到一个Function，通过一开始所给定的数据，让他有判断没有见过的图像是猫还是狗的能力，如图。<br><img src="/2019/04/06/frist/p1.jpg" alt="Alt text"></p>
+        <p>首先，什么是机器学习呢？<br>机器学习说白了就是 <strong>Looking for a Function From Data</strong> 。举个例子：如果你想要识别所给图像是猫还是狗，就要通过机器找到一个Function，通过一开始所给定的数据，让他有判断没有见过的图像是猫还是狗的能力，如图。<br><img src="/Sympathize/2019/04/06/frist/p1.jpg" alt="Alt text"></p>
 <h2 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h2><p>这里我们来大致说一下如何找出解决问题的Function，主要分为三个步骤：<strong>A set of function</strong> , <strong>Goodness of function f </strong>, <strong>Pick The “Best” Function f* </strong></p>
 <hr>
 <p>举个例子现在要预测神奇宝贝进化之后的攻击力，我们要先设许多function: 如f(x) , g(x) , h(x)… <code>x表示进化前的攻击力,函数的结果是进化后的攻击力</code> , 我们让</p>
 <script type="math/tex; mode=display">f(x)=ax+b,g(x)={ax^2}+bx+c,h(x)=ax^3+bx^2+cx+d</script><p>我们要根据许许多多神奇宝贝的进化数据，来判断每个function的好坏，最后用一个有效率的演算法，调出最好的function。</p>
-<h2 id="Learning-Map"><a href="#Learning-Map" class="headerlink" title="Learning Map"></a>Learning Map</h2><p>下面的图是一个大致的框架，<br><img src="/2019/04/06/frist/p2.jpg" alt="Alt text"></p>
+<h2 id="Learning-Map"><a href="#Learning-Map" class="headerlink" title="Learning Map"></a>Learning Map</h2><p>下面的图是一个大致的框架，<br><img src="/Sympathize/2019/04/06/frist/p2.jpg" alt="Alt text"></p>
 <blockquote>
 <p>在图里面，蓝色的表示机器学习的种类。机器学习主要有<strong>监督学习</strong>、<strong>半监督学习</strong>、<strong>迁移学习</strong>、<strong>无监督学习</strong>、<strong>强化学习</strong>。在<strong>监督学习</strong>中，橙色表示我们可以用机器学习来做什么，比如回归，分类，结构化学习。绿色表示我们用什么方法去解决这些问题，比如用线性模型，深度学习，SVM…</p>
 </blockquote>
-<p>那第一部分的内容就总结完了，感谢李宏毅老师的视频和ppt，有需要的请点击<a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML17.html" target="_blank" rel="noopener">这里</a>，还有感谢林欣老师的推荐。</p>
+<p><strong>监督学习</strong>：</p>
+<ul>
+<li>必须确定目标变量的值，以便机器学习算法可以发现特征和目标变量之间的关系。在监督学习中，给定一组数据，我们知道正确的输出结果应该是什么样子，并且知道在输入和输出之间有着一个特定的关系。</li>
+<li>训练样本 = 特征(feature) + 目标变量(label: 分类-离散值/回归-连续值)<br><strong>半监督学习</strong>：</li>
+<li>半监督学习处在监督学习和无监督学习之间，Semi-Supervised Learning中使用的数据，有一部分是标记过的，而大部分是没有标记的。因此和监督学习相比，半监督学习的成本较低，但是又能达到较高的准确度。</li>
+</ul>
+<p><strong>迁移学习</strong>：</p>
+<ul>
+<li>迁移学习能够将适用于大数据的模型迁移到小数据上，作为小数据模型的训练起点，节约训练神经网络需要的大量计算和时间资源。例如采用在计算机视觉挑战赛通过ImageNet数据（源数据）集训练出来的AlexNet 模型迁移应用到另一个新的数据集（目标数据集）重新进行训练（微调）。</li>
+</ul>
+<p><strong>无监督学习</strong>：</p>
+<ul>
+<li>无监督学习，即在未加标签的数据中，试图找到隐藏的结构。数据没有类别信息，也没有给定的目标值。</li>
+<li>无监督学习包括的类型：<strong>聚类</strong>：将数据集分成由类似的对象组成多个类。<strong>密度估计</strong>：通过样本分布的紧密程度，来估计与分组的相似性。<br>此外，无监督学习还可以减少数据特征的维度，以便我们可以使用二维或三维图形更加直观地展示数据信息。</li>
+</ul>
+<p><strong>强化学习</strong>：</p>
+<ul>
+<li>所谓强化学习就是智能系统从环境到行为映射的学习，以使奖励信号（强化信号）函数值最大，由于外部给出的信息很少，强化学习系统必须依靠自身的经历进行自我学习。通过这种学习获取知识，改进行动方案以适应环境。</li>
+<li>状态学习最关键的三个因素：<strong>状态</strong>，<strong>行为</strong>，<strong>环境奖励</strong>。<br>那第一部分的内容就总结完了，感谢李宏毅老师的视频和ppt，有需要的请点击<a href="http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML17.html" target="_blank" rel="noopener">这里</a>，还有感谢林欣老师的推荐。</li>
+</ul>
 
     </article>
     <!-- license  -->
@@ -419,7 +438,7 @@ height:50vh;
             <p>原文作者：<a href="https://github.com/Sympathize">叶大锤</a>
             </p><p>原文链接：<a href="https://github.com/Sympathize/2019/04/06/frist/">https://github.com/Sympathize/2019/04/06/frist/</a>
             </p><p>发表日期：<a href="https://github.com/Sympathize/2019/04/06/frist/">April 6th 2019, 4:31:58 pm</a>
-            </p><p>更新日期：<a href="https://github.com/Sympathize/2019/04/06/frist/">April 6th 2019, 8:10:52 pm</a>
+            </p><p>更新日期：<a href="https://github.com/Sympathize/2019/04/06/frist/">April 7th 2019, 10:49:15 am</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -685,23 +704,7 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-</body>
+    </body>
 </html>
 
 
