@@ -346,6 +346,39 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/06/10/4/">
+            
+                <span>李宏毅机器学习笔记（4）</span>
+        </a>
+        <div class="abstract-content">
+            这次我们研究的是分类，举个例子就是现在给你一个海龟，我们要去判断他是普通系的神奇宝贝，还是属于水系的神奇宝贝。如果用regression去实现根据特征值把数据划分成A类或者B类的话，会被一些极端的数据影响最终的结果。那么我们改怎么解决分类的问题呢？
+有一种思路是用朴素贝叶斯的思路去想，我们如果能知道从当前的神奇宝贝从CLASS1出来的几率和Class2出来的几率，这样就能知道这个宝可梦属于CLASS1的几率，所以问题就变成了求P(x|C1),P(x|C2),P(C1),P(C2) !  （听起来简单了，虽然我还是不太懂这个原理）
+OK！那么回到一开始的这个问题，现在出现了一个海龟，我们就...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Machine Learning">Machine Learning</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="朴素贝叶斯">朴素贝叶斯</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/04/13/3/">
             
                 <span>李宏毅机器学习笔记（3）</span>
@@ -584,9 +617,24 @@ Framework这里我们来大致说一下如何找出解决问题的Function，主
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 6
         </div>
         <!-- search  -->
         
@@ -596,6 +644,20 @@ Framework这里我们来大致说一下如何找出解决问题的Function，主
     
     
     
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/2019/06/10/4/">李宏毅机器学习笔记（4）</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
@@ -635,6 +697,8 @@ Framework这里我们来大致说一下如何找出解决问题的Function，主
         <span class="sidebar-tag-name" data-tags="Regression"><span class="iconfont-archer">&#xe606;</span>Regression</span>
     
         <span class="sidebar-tag-name" data-tags="tools"><span class="iconfont-archer">&#xe606;</span>tools</span>
+    
+        <span class="sidebar-tag-name" data-tags="朴素贝叶斯"><span class="iconfont-archer">&#xe606;</span>朴素贝叶斯</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -706,7 +770,23 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
 
 
