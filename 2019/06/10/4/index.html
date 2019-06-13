@@ -274,7 +274,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">791</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">774</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -408,7 +408,8 @@ height:50vh;
 <p>OK！那么回到一开始的这个问题，现在出现了一个海龟，我们就要计算从水系神奇宝贝中挑一个宝可梦出来是海龟的几率，然后在算从普通系神奇宝贝中挑一个宝可梦出来是海龟的几率。听到这里，我蒙了，这特么算个球？？万一在样例的水系神奇宝贝里面没有海龟呢？ 机智的李老师说，我们可以把这个神奇宝贝的各个属性写在一个vector里面，那么在样例中的每个神奇宝贝都变成了一个vector。好了，假设我们的vector里只有防御力D和特殊防御力SD，我们把样例中的所有水系神奇宝贝都画在二维平面上，我们根据这些散点的分布情况，哪怕在原数据中没有海龟，也可以用高斯分布，算出海龟出现的几率。<strong>那为什么要用高斯分布呢？ 因为用其他分布你也会问这个问题。。hhhhh</strong></p>
 <p>接下来问题就变成了，算出这个包括最多样例的高斯分布，这个也叫最大似然估计值。我们用微分算了算（假设算过。。），OK算好之后回到分类的问题就可以把所有的结果带入了，发现把所有的testing data做好之后，只有47%的正确率。。额，也许随机判断出来的结果会更好？ 不过我们发现我们只是D和SD两个，如果把所有的属性加上的话？em..结果也只有54%，但至少正确率增加了，也不是什么坏事情。</p>
 <p>所以我们怎么改进能让结果看起来更漂亮呢？我们的两个不同CLASS可以用相同的方差，这样可以有效地避免出现过拟合的情况。所以我们把两个组混合在一起算这个方差就OK了，经过一通运算，发现正确率从54%到73%了。</p>
-<p>最后的数学公式推导，懒得打公式了。。 看看我能不能把博客的图片功能修好吧。。</p>
+<p>最后的数学公式推导，懒得打公式了。。 </p>
+<p><img src="//sympathize.github.io/2019/06/10/4/p1.jpg" alt="logo"></p>
 <p>那今天就到这里了，感谢李宏毅老师的视频和ppt，有需要的请点击这里，还有感谢林欣老师的推荐。</p>
 
     </article>
@@ -418,7 +419,7 @@ height:50vh;
             <p>原文作者：<a href="https://sympathize.github.io">叶大锤</a>
             </p><p>原文链接：<a href="https://sympathize.github.io/2019/06/10/4/">https://sympathize.github.io/2019/06/10/4/</a>
             </p><p>发表日期：<a href="https://sympathize.github.io/2019/06/10/4/">June 10th 2019, 7:42:15 pm</a>
-            </p><p>更新日期：<a href="https://sympathize.github.io/2019/06/10/4/">June 10th 2019, 7:51:05 pm</a>
+            </p><p>更新日期：<a href="https://sympathize.github.io/2019/06/10/4/">June 13th 2019, 1:43:35 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -784,7 +785,23 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
 
 
